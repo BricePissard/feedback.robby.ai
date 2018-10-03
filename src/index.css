@@ -1,0 +1,46 @@
+body {margin:0;padding:0;font-family:sans-serif;}
+h2 {text-align:center;margin:10px 0;}
+h5 {text-align:center;margin:0;color:#999;border-bottom:1px solid #ccc;padding:0 0 15px 0;}
+
+.feedbackTop {width:100%}
+  /* -- Form Errors-- */
+  .formErrors {background-color:#f7b4b4;}
+    .formErrors p {margin:0;padding:15px;color:red;border-bottom:1px dashed red;}
+
+  /* -- Feedback Add-- */
+  .feedbackAdd {display:inline-block;width:44%;background:#eaeaea;border-right:1px solid #ccc;}
+  .feedbackAdd,
+  .feedbackAdd form {vertical-align:top;height:100%;display:inline-block;}
+  .feedbackAdd form {padding:10px;width:calc(100% - 40px);}
+    .feedbackAdd .fieldRow {min-height:50px;padding:5px 0;}
+    .feedbackAdd .fieldRow.rating {min-height:25px;}
+      .feedbackAdd .fieldRow > label {display:inline-block;min-width:80px;vertical-align:top;color:#777;font-size:.8em;font-weight:normal;letter-spacing:.1px;}
+        .feedbackAdd .fieldRow > input[type="text"] {display:inline-block;padding:6px;width:100%;border-color:transparent;}
+        .feedbackAdd .fieldRow > textarea {border-color:transparent;min-height:250px;width:100%;}
+        .feedbackAdd .fieldRow > input[type="submit"] {background-color:#5271a5;color:#fff;font-size:.8em;width:100%;border:none;border-radius:5px;padding:10px 0;cursor:pointer;}
+
+  /* -- Feedback Graph-- */
+  .feedbackGraph {display:inline-block;width:55%;}
+    .feedbackGraph .highcharts-container {width:auto;}
+
+/* -- Feedback Filter -- */
+.feedbackFilter {background:#ccc;padding:10px;text-align:center;}
+  .feedbackFilter h6 {display:inline-block;font-size:1em;font-weight:bold;letter-spacing:.4px;color:#555;margin:5px;}
+  .feedbackFilter span {display:inline-block;margin:0 10px;}
+    .feedbackFilter span label {color:#fff;cursor:pointer;border-radius:8px;padding:5px 10px;}
+    .feedbackFilter span label.selected {background-color:#666;}
+    .feedbackFilter span input[type="radio"] {display:none;}
+
+/* -- Feedback List/Rows -- */
+.feedbackList {padding:10px;}
+  .feedbackRow {background-color:#fafafa;margin-bottom:20px;border-radius:10px;padding:10px;box-shadow:2px 6px 0 #eee;}
+    .feedbackRow h3 {margin:5px 0;color:#555;}
+    .feedbackRow h4 {margin:4px 0;color:#777;}
+      .feedbackRow h4 i {font-size:.5em;}
+    .feedbackRow h6 {margin:4px 0;color:#999;}
+    .feedbackRow p {}
+
+@media all and (max-width:640px) {
+  .feedbackAdd {display:block;width:100%;}
+  .feedbackGraph {display:block;width:100%;}
+}
