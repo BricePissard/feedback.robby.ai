@@ -36,7 +36,7 @@ export default class FeedbackAdd extends Component {
 	 * Set the default values and initialize the form listeners
 	 */
 	constructor(props, state) {
-    super(props)
+    super(props, state)
     this.state = {
 			feedback: Constants.DEFAULT_FEEDBACK,
 			formErrors: { names: '', 		email: '', 		rating: '', 	 comment: '' },

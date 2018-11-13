@@ -61,7 +61,9 @@ const FeedbackGraph = ({ feedbacks }) => {
   ]
   return (
     <div className="feedbackGraph">
-      {feedbacks.length > 0 ? <HighchartsReact config={config} /> : <h5>No stats</h5> }
+      {feedbacks.length > 0 ? 
+				<HighchartsReact config={config} /> : <h5>No stats</h5>
+			}
     </div>
   )
 }

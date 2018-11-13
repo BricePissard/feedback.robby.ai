@@ -4,10 +4,16 @@ import FeedbackRow from './FeedbackRow'
 
 const FeedbackList = ({ feedbacks }) => {
 	let _feedbacks = []
-  feedbacks.map((feedback, id) => _feedbacks.push(<FeedbackRow key={id} { ...feedback } />))
+  feedbacks.map((feedback, id) => _feedbacks.push(
+		<FeedbackRow 
+			key={id} {...feedback} 
+		/>
+	))
   return (
     <div className="feedbackList">
-      {_feedbacks.length > 0 ? _feedbacks : <h5>No Feedbacks found</h5>}
+			{_feedbacks.length > 0 ? 
+				_feedbacks : <h5>No Feedbacks found</h5>
+			}
     </div>
   )
 }

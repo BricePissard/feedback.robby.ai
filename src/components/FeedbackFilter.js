@@ -21,7 +21,7 @@ export default class FeedbackAdd extends PureComponent {
 	 * Set the default values and initialize the form listeners
 	 */
 	constructor(props, state) {
-    super(props)
+    super(props, state)
     this.state = {
 			selected: 0
 		}

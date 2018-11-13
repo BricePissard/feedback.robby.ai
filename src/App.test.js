@@ -1,14 +1,13 @@
 import React              from 'react';
 import ReactDOM           from 'react-dom';
 import { Provider }       from 'react-redux'
-import { configure, shallow, mount, render } from 'enzyme'
+import { configure, mount } from 'enzyme'
 import Adapter            from 'enzyme-adapter-react-16'
 import configureMockStore from 'redux-mock-store';
 import thunk              from 'redux-thunk';
 
 import App            from './components/App';
 import FeedbackAdd    from './components/FeedbackAdd'
-import FeedbackFilter from './components/FeedbackFilter'
 import reducer        from './reducers'
 import Constants      from './constants'
 
@@ -23,12 +22,22 @@ const store = mockStore(initialState);
 
 configure({ adapter: new Adapter() });
 
+function createTestProps (props) {
+  return {
+    names:'hello1',
+		email:'test@test.com',
+		rating: 1,
+		comment: 'bla bla bla bla bla bla bla bla',
+    ...props
+  }
+}
+
 describe('Testing if the application can mount', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div')
     ReactDOM.render(
       <Provider store={store}>
-        <App/>
+        <App />
       </Provider>,
       div
     )
@@ -47,12 +56,7 @@ describe('Testing "_validateFields" methods once the Add feedback is called', ()
     addFeedback: jest.fn()
   }
   let __state, _state = {
-    feedback: {
-      names:'hello1',
-      email:'test@test.com',
-      rating: 1,
-      comment: 'bla bla bla bla bla bla bla bla'
-    }
+    feedback: createTestProps()
   }
 
   it('"email" should be INVALID', () => {
