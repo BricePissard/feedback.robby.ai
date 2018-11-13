@@ -5,9 +5,9 @@ import FeedbackRow from './FeedbackRow'
 const FeedbackList = ({ feedbacks }) => {
 	let _feedbacks = []
   feedbacks.map((feedback, id) => _feedbacks.push(
-		<FeedbackRow 
-			key={id} {...feedback} 
-		/>
+	<FeedbackRow 
+		key={id} {...feedback} 
+	/>
 	))
   return (
     <div className="feedbackList">
